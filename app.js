@@ -67,7 +67,7 @@ function draw() {
     const x = canvas.width / 2;
     const y = canvas.height / 2;
 
-    const path = font.getPath(text, 50, y, fontSize);
+    const path = font.getPath(text, 10, y, fontSize);
     path.commands.forEach(cmd => {
         // Adjust coordinates for random movement relative to their current position
         if (cmd.x) cmd.x += Math.random() * F_FACTOR - (F_FACTOR / 2); // Center random movement around 0
