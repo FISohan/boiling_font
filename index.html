@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boiling Text</title>
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            
+            padding: 10px;
+        }
+
+        #controls {
+            padding-top: 10px;
+        }
+
+        #controls div {
+            margin-bottom: 5px;
+        }
+
+        label {
+            display: inline-block;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas style="background-color: rgb(206, 206, 206);" id="canvas" width="800" height="400"></canvas>
+    <div id="controls">
+        <div>
+            <label for="text">Text:</label>
+            <input type="text" id="text" value="Hello, World">
+        </div>
+        <div>
+            <label for="font-size">Font Size:</label>
+            <input type="number" id="font-size" value="70">
+        </div>
+        <div>
+            <label for="f-factor">F Factor:</label>
+            <input type="number" id="f-factor" value="1.8" step="0.1">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
