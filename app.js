@@ -11,7 +11,7 @@ let fpsInterval, then;
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight/2;
     // Redraw after resize to ensure proper scaling and positioning
     if (font) {
         draw();
@@ -67,7 +67,7 @@ function draw() {
     const x = canvas.width / 2;
     const y = canvas.height / 2;
 
-    const path = font.getPath(text, x, y, fontSize);
+    const path = font.getPath(text, 50, y, fontSize);
     path.commands.forEach(cmd => {
         // Adjust coordinates for random movement relative to their current position
         if (cmd.x) cmd.x += Math.random() * F_FACTOR - (F_FACTOR / 2); // Center random movement around 0
